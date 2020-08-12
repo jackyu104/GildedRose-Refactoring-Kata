@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use GildedRose\GildedRose;
+use GildedRose\GildedRoseRefact;
 use GildedRose\Item;
 
 echo "OMGHAI!" . PHP_EOL;
@@ -20,9 +21,9 @@ $items = array(
     new Item('Conjured Mana Cake', 3, 6)
 );
 
-$app = new GildedRose($items);
+$app = new GildedRoseRefact($items);
 
-$days = 2;
+$days = 3;
 if (count($argv) > 1) {
     $days = (int) $argv[1];
 }
@@ -36,3 +37,5 @@ for ($i = 0; $i < $days; $i++) {
     echo PHP_EOL;
     $app->updateQuality();
 }
+
+
